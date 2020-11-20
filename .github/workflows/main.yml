@@ -38,4 +38,4 @@ jobs:
         env:
            DOCKERHUB_USERNAME: ${{ secrets.DockerHubUname }}
            DOCKERHUB_PASSWORD: ${{ secrets.DockerHubPwd }}
-           DOCKERHUB_REPOSITORY: hvalev/onedrive-arm64
+           DOCKERHUB_REPOSITORY: hvalev/onedrive-docker-arm64
