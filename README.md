@@ -37,7 +37,7 @@ You'll need 2GB of RAM.
 
 ## Dear traveller from the future
 If the build does not work, look at the following potential reasons as to why that might be the case:
-* Activating the LDC compiler environment is strongly typed in the dockerfile. However, I'm using the install script for it, so the version might've changed. In the build output you can see which version was installed.
+* Activating the LDC compiler environment is statically referred to in the dockerfile. However, I'm using the install script for it, so the version might've changed. In the build output you can see which version was installed.
 * Check the original dockerfile by onedrive for any changes https://hub.docker.com/r/driveone/onedrive.
 * The onedrive git repository (https://github.com/abraunegg/onedrive) is cloned directly into the image. In a future version the entrypoint.sh's location might've moved.
 * The date is 30 June 2024 and centos 7 reached it's end of life. There might be incompatibilities with the old container, so you'll need to upgrade. The new package manager centos 8 uses is dnf, the successor of yum.
