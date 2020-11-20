@@ -20,7 +20,7 @@ jobs:
       -
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
-	  - 
+      - 
         name: Login DockerHub
         run: echo "${{ secrets.DockerHubPwd }}" | docker login -u "${{ secrets.DockerHubUname }}" --password-stdin
       -
