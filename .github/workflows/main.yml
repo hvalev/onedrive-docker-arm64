@@ -34,8 +34,8 @@ jobs:
           --platform linux/arm64 .
       - 
         name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2.1.0
+        uses: peter-evans/dockerhub-description@v2
         env:
            DOCKERHUB_USERNAME: ${{ secrets.DockerHubUname }}
-           DOCKERHUB_PASSWORD: ${{ secrets.DockerHubPwd }}
+           DOCKERHUB_PASSWORD: ${{ secrets.DockerHubPwdPwd }}
            DOCKERHUB_REPOSITORY: hvalev/onedrive-docker-arm64
