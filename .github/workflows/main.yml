@@ -2,6 +2,13 @@ name: ci
 
 on:
   push:
+    tags:
+      - 'v*'
+    paths-ignore:
+    - 'README.md'
+
+env:
+  BUILD_VERSION: "0.1"
 
 jobs:
   buildx:
@@ -31,6 +38,7 @@ jobs:
         run: |
           docker buildx build --push \
           --tag hvalev/onedrive-docker-arm64:latest \
+          --tag hvalev/onedrive-docker-arm64:${BUILD_VERSION} \
           --platform linux/arm64 .
       - 
         name: Docker Hub Description
